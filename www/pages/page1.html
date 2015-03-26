@@ -1,0 +1,56 @@
+<script type="text/javascript" src="js/game1.js"></script>
+
+
+<div class='game-intro'>
+<p>Solve as many simple maths problems as you can in 60 seconds!</p>
+<div id="startgame" class='raised-button full-width-button theme waves-effect waves-light' onclick="StartGame()">BEGIN</div>
+</div>
+
+
+<div class='game-play'>
+
+	<table class="status-bar">
+		<tr>
+			<td><div class='status-caption'><p>SCORE</p></div><div class='status-value'><p id="score">0</p></div></td>
+			<td style="width:8px !important"></td>
+			<td><div class='status-caption'><p>TIME</p></div><div class='status-value'><p id="timer">60</p></div></td>
+		</tr>
+	</table>
+
+	<div class='clear'></div>
+		<div id="sum-container">
+			<p id="sum">&nbsp; </p><p>&nbsp;</p><p id="answer"></p>
+		</div>
+		<div class='clear'></div>
+		
+		<div id="keypad">
+			<div class='keypad-line'>
+				<div class='keypad-key'>1</div>
+				<div class='keypad-key'>2</div>
+				<div class='keypad-key'>3</div>
+			</div>
+			
+			<div class='keypad-line'>
+				<div class='keypad-key'>4</div>
+				<div class='keypad-key'>5</div>
+				<div class='keypad-key'>6</div>
+			</div>
+			
+			<div class='keypad-line'>
+				<div class='keypad-key'>7</div>
+				<div class='keypad-key'>8</div>
+				<div class='keypad-key'>9</div>
+			</div>
+			
+			<div class='keypad-line'>
+				<div id ="key-clear" class='keypad-key'><i class='mdi-content-clear' /></div>
+				<div class='keypad-key'>0</div>
+				<div id = "key-back" class='keypad-key'><i class='mdi-hardware-keyboard-backspace' /></div>
+			</div>
+		</div>
+	
+	
+		<div id="submit" class='raised-button full-width-button theme waves-effect waves-light' onclick='GetAnswer()'>Submit</div>
+
+</div>
+

@@ -1,0 +1,128 @@
+ /***********************************************/
+ /*				COMMON STYLES
+ /***********************************************/
+ button:active { background:inherit; }
+ 
+ .raised-button  {
+	min-width:64px;
+	margin:4px;
+	padding:10px 20px;
+	border-radius:2px;
+	box-shadow:0 1px 2px #999;
+	background-color:#2196F3;
+	outline:none;
+	border:none;
+	color:#fff;
+	font-weight:600;
+	font-family:Roboto-Thin;
+	text-align:center;
+ }
+ 
+ 
+ .full-width-button {
+	margin:8px 0;
+	padding:20px 0;
+	width:100%;
+	font-size:1.4em;
+ }
+ 
+ .game-intro {
+	padding:20px;
+	font-size:1.2em;
+ }
+ 
+ .game-intro p {
+	margin-bottom:20px;
+ }
+ 
+ 
+ /***********************************************/
+ /*					GAME ONE
+ /***********************************************/
+ 
+ #sum-container {
+	font-size:3em;
+	text-align:center;
+	margin:0 0 8px 0;
+	border:1px solid #ddd;
+	border-radius:3px;
+	padding:5px 0;
+}
+
+#sum-container p {
+	display:inline-block;
+}
+
+#keypad {
+	width:100%;
+	display:table;
+	border:1px solid #ddd;
+	display:table;
+	table-layout: fixed;
+	border-radius:3px;
+}
+
+.keypad-line {
+	width:100%;
+	display:table-row;
+}
+.keypad-key {
+	display:table-cell;
+	text-align:center;
+	padding:12px;
+	font-size:2em;
+	vertical-align:middle;
+}
+
+/*.keypad-key:active {
+	background-color:#A5D6A7;
+}*/
+
+.keypad-key img {
+	width:1em; 
+	margin-bottom:-6px;
+}
+
+#submit {
+	position:relative;
+	bottom:0;
+}
+
+.status-bar {
+	width:100%;
+	color:#FFF;
+	font-size:1.2em;
+	font-weight:500;
+	table-layout: fixed;
+	margin-bottom:8px;
+	padding:0;
+  border-collapse: separate;
+	
+}
+
+.status-bar td {
+	padding:0;
+	margin:0;
+}
+.status-caption {
+	display:inline-block;
+	width:60%;
+	background-color:#1B5E20;
+	padding:8px;
+	border-top-left-radius:3px;
+	border-bottom-left-radius:3px;
+	text-align:center;
+}
+
+.status-value {
+	display:inline-block;
+	width:40%;
+	background-color:#2E7D32;
+	text-align:center;
+	padding:8px;
+	border-top-right-radius:3px;
+	border-bottom-right-radius:3px;
+}
+
+
+
