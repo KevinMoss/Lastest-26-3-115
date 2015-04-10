@@ -1,1 +1,247 @@
-<h1>PAGE 2</h1>
+<style type="text/css">
+<!--
+.bgclr {background-color: white; color: black; font-weight: bold;}
+-->
+</style>
+
+<script language="JavaScript">
+
+<!-- Begin
+// Insert number of questions
+var numQues = 16;
+
+// Insert number of choices in each question
+var numChoi = 4;
+
+// Insert number of questions displayed in answer area
+var answers = new Array(16);
+
+// Insert answers to questions
+answers[0] = "MyFirstProgram";
+answers[1] = "Public Static Void Main(String[args])";
+answers[2] = "String word;";
+answers[3] = "for(i=0; i<1; i++)";
+answers[4] = "A Compiler";
+answers[5] = "System.out.println('Welcome to java')";
+answers[6] = "Test.java";
+answers[7] = "import javax.swing.JOptionPane;";
+answers[8] = "A semicolon (;)";
+answers[9] = "10";
+answers[10] = "100";
+answers[11] = "Braces";
+answers[12] = "x is 1";
+answers[13] = "CPU";
+answers[14] = "**Comment**";
+answers[15] = "input.nextInteger();";
+
+// Do not change anything below here ...
+function getScore(form) {
+  var score = 0;
+  var currElt;
+  var currSelection;
+  for (i=0; i<numQues; i++) {
+    currElt = i*numChoi;
+    for (j=0; j<numChoi; j++) {
+      currSelection = form.elements[currElt + j];
+      if (currSelection.checked) {
+        if (currSelection.value == answers[i]) {
+          score++;
+          break;
+        }
+      }
+    }
+  }
+  score = Math.round(score/numQues*100);
+  scor = Math.round(score + numQues-1);
+  form.percentage.value = score + "%";
+  var correctAnswers = "";
+  for (i=1; i<=numQues; i++) {
+    correctAnswers += i + ". " + answers[i-1] + "\r\n";
+  }
+  form.solutions.value = correctAnswers;
+}
+//  End -->
+</script>
+
+</HEAD>
+
+<BODY>
+
+<h3>Web Design Quiz</h3>
+
+<form name="quiz">
+1. What is the correct java identifier?
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q1" value="My FirstProgram">My FirstProgram</li>
+  <li><input type="radio" name="q1" value="My-FirstProgram">My-FirstProgram</li>
+  <li><input type="radio" name="q1" value="MyFirstProgram">MyFirstProgram</li>
+  <li><input type="radio" name="q1" value="My1stProgram">My1stProgram</li>
+</ul>
+
+2. How do you start a java document?
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q2" value="Public Static Void Main(String[args])">Public Static Void Main(String[args])</li>
+  <li><input type="radio" name="q2" value="PublicStaticUnvoidMain(String[args]);">PublicStaticUnvoidMain(String[args]);</li>
+  <li><input type="radio" name="q2" value="Public Static Void Main (Boolean[args])">Public Static Void Main (Boolean[args])</li>
+  <li><input type="radio" name="q2" value="Public Static Void(Boolean[args])">Public Static Void(Boolean[args])</li>
+</ul>
+
+3. How do you declare a new string variable?
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q3" value="string word;">string word;</li>
+  <li><input type="radio" name="q3" value="String word;">String word;</li>
+  <li><input type="radio" name="q3" value="Variable String Word;">Variable String Word;</li>
+  <li><input type="radio" name="q3" value="String word:">String word:</li>
+</ul>
+
+4. How do you make a simple loop?
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q4" value="for(i=0; i<1; i++)">for(i=0; i<1; i++)</li>
+  <li><input type="radio" name="q4" value="for(i=0; i<2; i++)">for(i=0; i<2; i++)</li>
+  <li><input type="radio" name="q4" value="for(i=1; i<1; i+)">for(i=1; i<1; i+)</li>
+  <li><input type="radio" name="q4" value="for(i=1; i<1; g++)">for(i=1; i<0; g++)</li>
+</ul>
+ 
+5. _________ translates high-level language program into machine language?
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q5" value="An assembler">An assembler</li>
+  <li><input type="radio" name="q5" value="A compliler">A compiler</li>
+  <li><input type="radio" name="q5" value="The CPU">The CPU</li>
+  <li><input type="radio" name="q5" value="The Operating System">The Operating System</li>
+</ul>
+
+6. Which of the following statements is correct to display "Welcome to java" On the console.
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q6" value="System.out.println('Welcome to jav');">System.out.println("Welcome to java");</li>
+  <li><input type="radio" name="q6" value="System.Out.PrintLn('Weclome to ava');">System.Out.PrintLn("Weclome to ava");</li>
+  <li><input type="radio" name="q6" value="system.out.printnn('Whalegum 2 java');">system.out.printnn("Whalegum 2 java");</li>
+  <li><input type="radio" name="q6" value="System.out.prinln('Welcome to nava');">System.out.prinln("Welcome to nava");</li>
+</ul>
+
+7. Suppose you define a java class as follows 
+	public class Test {
+	
+	}
+	In order to compile this program, the source code should be stored in a file named :
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q7" value="Test.txt">Test.txt</li>
+  <li><input type="radio" name="q7" value="Test.doc">Test.doc</li>
+  <li><input type="radio" name="q7" value="Text.class">Text.class</li>
+  <li><input type="radio" name="q7" value="Test.java">Test.java</li>
+</ul>
+
+8. To use JOptionPane in your program, you may import using:
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q8" value="import javax.*.JOptionPane">import javax.*.JOptionPane</li>
+  <li><input type="radio" name="q8" value="import javax.util.JOptionPane;">import javax.util.JOptionPane;</li>
+  <li><input type="radio" name="q8" value="import javax.swing.JOptionPane;">import javax.swing.JOptionPane;</li>
+  <li><input type="radio" name="q8" value="import java.swing.*.JOptionPane;">import java.swing.*.JOptionPane;</li>
+</ul>
+
+9. To use JOptionPane in your program, you may import using:
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q9" value="A comma (,)">A comma (,)</li>
+  <li><input type="radio" name="q9" value="A period(.)">A period(.)</li>
+  <li><input type="radio" name="q9" value="A semicolon (;)">A semicolon (;)</li>
+  <li><input type="radio" name="q9" value="An asterisk(*)">An asterisk(*)</li>
+</ul>
+
+10. How many times will the following code print "Welcome to Java"?
+
+int count = 0;
+while (count < 10) {
+System.out.println("Welcome to Java");
+count++;
+
+}
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q10" value="10">10</li>
+  <li><input type="radio" name="q10" value="7">7</li>
+  <li><input type="radio" name="q10" value="4(;)">4</li>
+  <li><input type="radio" name="q10" value="9">9</li>
+</ul> 
+
+11.How many times is the println command executed.
+
+for (int i = 0; i < 10; i++) 
+  for (int j = 0; j < 10; j++)
+    System.out.println(i * j);
+
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q11" value="20">20</li>
+  <li><input type="radio" name="q11" value="10">10</li>
+  <li><input type="radio" name="q11" value="100(;)">100</li>
+  <li><input type="radio" name="q11" value="45">45</li>
+</ul> 
+
+12. A block is enclosed inside __________.
+
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q12" value="Parentheses">Parentheses</li>
+  <li><input type="radio" name="q12" value="Braces">Braces</li>
+  <li><input type="radio" name="q12" value="Brackets">Brackets</li>
+  <li><input type="radio" name="q12" value="Quotes">Quotes</li>
+</ul> 
+
+13. What is the output of the following code?
+
+int x = 0;
+if (x < 4) {
+  x = x + 1;
+}
+System.out.println("x is " + x);
+
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q13" value="x is 4">x is 4</li>
+  <li><input type="radio" name="q13" value="x is 3">x is 3</li>
+  <li><input type="radio" name="q13" value="x is 0">x is 0</li>
+  <li><input type="radio" name="q13" value="x is 1">x is 1</li>
+</ul> 
+
+14. What is the output of the following code?
+
+__________ is the brain of a computer.
+
+A. Hardware
+B. CPU
+C. Memory
+D. Disk
+
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q14" value="CPU">CPU</li>
+  <li><input type="radio" name="q14" value="Hardware">Hardware</li>
+  <li><input type="radio" name="q14" value="Memory">Memory</li>
+  <li><input type="radio" name="q14" value="Disk">Disk</li>
+</ul> 
+
+15. Which of the following lines is not a Java comment?
+
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q15" value="*/Comment/*">*/Comment/*</li>
+  <li><input type="radio" name="q15" value="/*Comment/*">/*Comment/*</li>
+  <li><input type="radio" name="q15" value="**Comment**">**Comment**</li>
+  <li><input type="radio" name="q15" value="//Comment//">//Comment//</li>
+</ul> 
+
+16. Suppose a Scanner object is created as follows:
+
+Scanner input = new Scanner(System.in);
+
+What method do you use to read an int value?
+
+<ul style="margin-top: 1pt">
+  <li><input type="radio" name="q16" value="input.nextInteger();">input.nextInteger();</li>
+  <li><input type="radio" name="q16" value="input.int">input.int</li>
+  <li><input type="radio" name="q16" value="input.integer">input.integer</li>
+  <li><input type="radio" name="q16" value="input.nextint">input.nextint</li>
+</ul> 
+
+
+
+<input type="button" value="Get score" onClick="getScore(this.form)">
+<input type="reset" value="Clear answers">
+<p> Score = <strong><input class="bgclr" type="text" size="16" name="percentage" disabled></strong><br><br>
+Correct answers:<br>
+<textarea class="bgclr" name="solutions" wrap="virtual" rows="16" cols="250" disabled>
+</textarea>
+</form>
